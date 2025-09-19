@@ -35,6 +35,36 @@ function sendMessage() {
   }
 }
 
+function showDenunciaModal() {
+  document.getElementById("denunciaModal").style.display = "flex"
+  document.getElementById("denunciaForm").style.display = "block"
+  document.getElementById("denunciaExito").style.display = "none"
+}
+
+function enviarDenuncia(event) {
+  event.preventDefault()
+  // Aquí podrías enviar los datos a un backend real
+  document.getElementById("denunciaForm").style.display = "none"
+  document.getElementById("denunciaExito").style.display = "block"
+  setTimeout(() => {
+    closeModal('denunciaModal')
+  }, 2500)
+}
+function showParesModal() {
+  document.getElementById("paresModal").style.display = "flex"
+  document.getElementById("paresForm").style.display = "block"
+  document.getElementById("paresExito").style.display = "none"
+}
+
+function enviarPares(event) {
+  event.preventDefault()
+  // Aquí podrías enviar los datos a un backend real
+  document.getElementById("paresForm").style.display = "none"
+  document.getElementById("paresExito").style.display = "block"
+  setTimeout(() => {
+    closeModal('paresModal')
+  }, 2500)
+}
 function addMessage(text, sender) {
   const messagesContainer = document.getElementById("chatMessages")
   const messageDiv = document.createElement("div")

@@ -32,6 +32,7 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
+
 .span {
   right: 10%;
   width: 100%;
@@ -67,9 +68,38 @@ body {
   color: var(--primary-color);
 }
 
+.denuncia,
+.apoyo-pares {
+  padding: 4rem 0;
+  background: var(--surface-color);
+  margin-top: 2rem;
+}
+
+.denuncia textarea,
+.apoyo-pares textarea,
+.apoyo-pares input,
+.denuncia select {
+  width: 100px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  font-size: 1rem;
+  resize: vertical;
+  box-sizing: 10px;
+}
+
 .nav {
   display: flex;
   gap: 2rem;
+}
+
+.nav-link-denuncia {
+  text-decoration: none;
+  color: rgb(253, 0, 0);
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s;
 }
 
 .nav-link {
@@ -83,12 +113,19 @@ body {
   color: var(--primary-color);
 }
 
+.nav-link-denuncia:hover {
+  background: var(--danger-color);
+  color: white;
+  border-radius: 8px;
+  transition: background-color 0.1s;
+}
+
 .emergency-btn {
   background: var(--danger-color);
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
-  border-radius: var(--border-radius);
+  border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
   display: flex;
@@ -135,7 +172,7 @@ body {
 .btn {
   padding: 0.75rem 1.5rem;
   border: none;
-  border-radius: var(--border-radius);
+  border-radius: 5px;
   font-weight: 600;
   cursor: pointer;
   display: inline-flex;
@@ -146,9 +183,27 @@ body {
   font-size: 1rem;
 }
 
+#decrip {
+  border-radius: 6px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0;
+  color: var(--text-primary);
+}
+
+#descripcion {
+  border-radius: 6px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0;
+  color: var(--text-primary);
+}
+
 .btn-primary {
+  background: transparent;
   background: var(--surface-color);
   color: var(--primary-color);
+  border: 2px solid var(--primary-color);
 }
 
 .btn-primary:hover {
@@ -210,7 +265,7 @@ body {
 .action-card {
   background: var(--background-color);
   padding: 2rem;
-  border-radius: var(--border-radius);
+  border-radius: 6px;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s;
@@ -227,6 +282,13 @@ body {
   font-size: 3rem;
   color: var(--primary-color);
   margin-bottom: 1rem;
+}
+
+.h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  margin: 2rem;
 }
 
 .action-card h3 {
@@ -254,9 +316,19 @@ body {
 .resource-card {
   background: var(--surface-color);
   padding: 2rem;
-  border-radius: var(--border-radius);
+  border-radius: 6px;
   text-align: center;
   box-shadow: var(--shadow);
+}
+
+.spaces {
+  margin: 1rem;
+  background: var(--background-color);
+  padding: 2rem;
+  border-radius: 6px;
+  text-align: center;
+  border: 2px solid var(--border-color);
+
 }
 
 .resource-icon {
@@ -291,7 +363,7 @@ body {
 .contact-card {
   background: var(--background-color);
   padding: 2rem;
-  border-radius: var(--border-radius);
+  border-radius: 6px;
   text-align: center;
   border: 2px solid var(--border-color);
 }
@@ -326,18 +398,27 @@ body {
   width: 350px;
   height: 500px;
   background: var(--surface-color);
-  border-radius: var(--border-radius);
+  border-radius: 6px;
   box-shadow: var(--shadow);
   display: none;
   flex-direction: column;
   z-index: 1000;
 }
 
+.contactoPares {
+  border-radius: 5px;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  margin: 1rem;
+}
+
 .chat-header {
   background: var(--primary-color);
   color: white;
   padding: 1rem;
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -370,7 +451,7 @@ body {
 .message {
   max-width: 80%;
   padding: 0.75rem;
-  border-radius: var(--border-radius);
+  border-radius: 5px;
 }
 
 .message.user {
@@ -386,6 +467,7 @@ body {
 }
 
 .chat-input {
+  border-radius: 6px;
   padding: 1rem;
   display: flex;
   gap: 0.5rem;
@@ -396,7 +478,7 @@ body {
   flex: 1;
   padding: 0.75rem;
   border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
+  border-radius: 5px;
   outline: none;
 }
 
@@ -405,7 +487,7 @@ body {
   color: white;
   border: none;
   padding: 0.75rem;
-  border-radius: var(--border-radius);
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -441,7 +523,7 @@ body {
 
 .modal-content {
   background: var(--surface-color);
-  border-radius: var(--border-radius);
+  border-radius: 5px;
   max-width: 500px;
   width: 90%;
   max-height: 80vh;
@@ -477,7 +559,7 @@ body {
 .emergency-contact {
   padding: 1rem;
   background: var(--background-color);
-  border-radius: var(--border-radius);
+  border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -505,6 +587,7 @@ body {
 }
 
 .footer-section h4 {
+  text-align: auto;
   margin-bottom: 1rem;
   color: var(--primary-color);
 }
